@@ -35,7 +35,10 @@ class MyApp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start, // Centers the content
               children: [
-                const Icon(Icons.add, size: 50, color: Colors.blue),
+                const Padding(
+                  padding: EdgeInsets.only(top: 30.0),
+                  child: Icon(Icons.add, size: 50, color: Colors.blue),
+                ),
                 const Text("Add Icon", style: TextStyle(fontSize: 24)),
                 Center(
                   child: Container(
