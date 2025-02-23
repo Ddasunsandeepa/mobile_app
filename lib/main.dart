@@ -13,39 +13,33 @@ class MyApp extends StatelessWidget {
       title: "new app",
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 190, 185, 249),
-          title: Text("hellow wolrd"),
-          actions: <Widget>[
+          backgroundColor: const Color.fromARGB(255, 247, 225, 159),
+          title: const Text("hello wolrd"),
+          actions: [
             IconButton(
-              icon: const Icon(Icons.add_alert),
-              tooltip: 'Show Snackbar',
+              icon: Icon(Icons.notification_add_sharp), // Correct syntax
               onPressed: () {
-                ScaffoldMessenger.of(
-                  context,
-                ).showSnackBar(
-                    const SnackBar(content: Text('This is a snackbar')));
+                // Perform an action when the button is pressed
               },
             ),
-            IconButton(
-              icon: const Icon(Icons.navigate_next),
-              tooltip: 'Go to the next page',
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) {
-                      return Scaffold(
-                        appBar: AppBar(title: const Text('Next page')),
-                        body: const Center(
-                          child: Text('This is the next page',
-                              style: TextStyle(fontSize: 24)),
-                        ),
-                      );
-                    },
-                  ),
-                );
-              },
-            ),
+          ],
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start, // Centers the content
+          children: [
+            const Icon(Icons.add, size: 50, color: Colors.blue),
+            const Text("Add Icon", style: TextStyle(fontSize: 24)),
+            Center(
+              child: Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.indigoAccent),
+                margin: const EdgeInsets.all(10),
+                child: Center(child: const Text("hello")),
+              ),
+            )
           ],
         ),
       ),
