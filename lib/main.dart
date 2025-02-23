@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                     color: Colors.indigoAccent),
                 margin: const EdgeInsets.all(10),
-                child: Center(child: const Text("hello")),
+                child: Center(child: Text("hello")),
               ),
             )
           ],
