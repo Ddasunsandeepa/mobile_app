@@ -1,7 +1,7 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,65 +10,85 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "new app",
-      home: Scaffold(
-          backgroundColor: Colors.black26,
+      debugShowCheckedModeBanner: false,
+      title: "app",
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.black,
           appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 247, 225, 159),
-            title: const Text("hello wolrd"),
+            backgroundColor: Colors.black,
+            shadowColor: const Color.fromARGB(255, 208, 208, 19),
+            title: const Text(
+              "BLACK HOLE",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900),
+            ),
             actions: [
               IconButton(
-                icon: Icon(Icons.notification_add_sharp), // Correct syntax
-                onPressed: () {
-                  // Perform an action when the button is pressed
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.notification_add_sharp), // Correct syntax
-                onPressed: () {
-                  // Perform an action when the button is pressed
-                },
-              ),
+                onPressed: () {},
+                icon: Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                ),
+              )
             ],
           ),
           body: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start, // Centers the content
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(top: 30.0),
-                  child: Icon(Icons.add, size: 50, color: Colors.blue),
-                ),
-                const Text("Add Icon", style: TextStyle(fontSize: 24)),
-                Center(
-                  child: Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.indigoAccent),
-                    margin: const EdgeInsets.all(10),
-                    child: Center(child: Text("hello")),
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    "SPACE DETAILS",
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                 ),
-                Column(
-                  children: [
-                    Image.asset(
-                      "assets/space1.png",
-                      height: 280,
+                const SizedBox(
+                  height: 40,
+                ),
+                Center(
+                  child: Image.asset(
+                    "assets/space1.png",
+                    height: 300,
+                    scale: 2,
+                  ),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                const Text(
+                  "Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, TextScaler? textScaler,StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, TextScaler? textScaler, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior?",
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w400),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Center(
+                  child: Container(
+                    child: Padding(
+                      padding: EdgeInsets.all(14.0),
+                      child: Text(
+                        "Click Here",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    Image.asset(
-                      "assets/space2.png",
-                      height: 280,
-                    )
-                  ],
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color.fromARGB(255, 244, 2, 67)),
+                  ),
                 )
               ],
             ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
