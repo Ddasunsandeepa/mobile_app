@@ -158,16 +158,16 @@ class MyApp extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.w400),
                   textAlign: TextAlign.center,
                 ),
-               const SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 GestureDetector(
-                  onTap: (){
-                  const  Color.fromARGB(66, 142, 79, 231)
+                  onTap: () {
+                    const Color.fromARGB(66, 142, 79, 231);
                   },
                   child: Center(
                     child: Container(
-                     child: Padding(
+                      child: Padding(
                         padding: EdgeInsets.all(12.0),
                         child: Text(
                           "Space Details",
@@ -182,8 +182,8 @@ class MyApp extends StatelessWidget {
                 ),
                 const Center(
                   child: Padding(
-                    padding:  EdgeInsets.all(8.0),
-                    child:  Divider(
+                    padding: EdgeInsets.all(8.0),
+                    child: Divider(
                         height: 10,
                         thickness: 1,
                         indent: 20,
@@ -191,8 +191,8 @@ class MyApp extends StatelessWidget {
                         color: Color.fromARGB(255, 215, 187, 187)),
                   ),
                 ),
-               const Padding(
-                  padding:  EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
                     "BLACK HOLE",
                     style: TextStyle(
@@ -201,9 +201,9 @@ class MyApp extends StatelessWidget {
                         color: Colors.white),
                   ),
                 ),
-               const Padding(
-                  padding:  EdgeInsets.all(12.0),
-                  child:  Text(
+                const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
                     "Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? ",
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w400),
