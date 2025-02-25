@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MyApp());
@@ -157,27 +158,32 @@ class MyApp extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.w400),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 30,
                 ),
-                Center(
-                  child: Container(
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text(
-                        "Space Details",
-                        style: TextStyle(color: Colors.black, fontSize: 17),
+                GestureDetector(
+                  onTap: (){
+                  const  Color.fromARGB(66, 142, 79, 231)
+                  },
+                  child: Center(
+                    child: Container(
+                     child: Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                          "Space Details",
+                          style: TextStyle(color: Colors.black, fontSize: 17),
+                        ),
                       ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Color.fromARGB(255, 2, 244, 184)),
                     ),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(255, 2, 244, 184)),
                   ),
                 ),
-                Center(
+                const Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: const Divider(
+                    padding:  EdgeInsets.all(8.0),
+                    child:  Divider(
                         height: 10,
                         thickness: 1,
                         indent: 20,
@@ -185,8 +191,8 @@ class MyApp extends StatelessWidget {
                         color: Color.fromARGB(255, 215, 187, 187)),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+               const Padding(
+                  padding:  EdgeInsets.all(8.0),
                   child: Text(
                     "BLACK HOLE",
                     style: TextStyle(
@@ -195,9 +201,9 @@ class MyApp extends StatelessWidget {
                         color: Colors.white),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: const Text(
+               const Padding(
+                  padding:  EdgeInsets.all(12.0),
+                  child:  Text(
                     "Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? ",
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w400),
